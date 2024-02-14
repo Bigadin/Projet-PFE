@@ -121,7 +121,7 @@ class LungSegmentation3D:
         actor.SetMapper(mapper)
        
         # Adjust actor opacity
-        actor.GetProperty().SetOpacity(0.5)
+        actor.GetProperty().SetOpacity(1)
 
         # Create renderer
         renderer = vtk.vtkRenderer()
