@@ -128,9 +128,17 @@ class LungSegmentation3D:
         renderer.AddActor(actor)
         renderer.SetBackground(0.1, 0.2, 0.4)
 
+        # Set renderer options for smoother rendering
+        renderer.SetUseDepthPeeling(1)
+        renderer.SetOcclusionRatio(0.1)
+
         # Create render window
         render_window = vtk.vtkRenderWindow()
         render_window.AddRenderer(renderer)
+        
+        # Set render window properties for smoother rendering
+        render_window.SetMultiSamples(0)
+        render_window.SetAlphaBitPlanes(1)
 
         # Create render window interactor
         render_window_interactor = vtk.vtkRenderWindowInteractor()
