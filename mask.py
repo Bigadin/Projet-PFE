@@ -6,6 +6,7 @@ from pydicom.dataset import FileDataset
 from skimage import measure 
 from vtk.util.numpy_support import numpy_to_vtk  # Import numpy_to_vtk
 
+#lung segmentation
 class LungSegmentation3D:
     def __init__(self, dicom_dir):
         self.dicom_dir = dicom_dir
